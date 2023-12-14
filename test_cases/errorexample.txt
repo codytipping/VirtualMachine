@@ -1,0 +1,7 @@
+var x, y;
+begin
+	x := 3;
+	y := 7;
+	if (x == y then
+		write x;
+end.

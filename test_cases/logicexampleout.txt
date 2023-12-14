@@ -1,0 +1,175 @@
+Lexeme Table:
+lexeme		token type
+        var	4
+          x	28
+          ,	25
+          y	28
+          ;	29
+      begin	20
+          x	28
+         :=	31
+          3	30
+          ;	29
+          y	28
+         :=	31
+          7	30
+          ;	29
+         if	10
+          !	34
+          (	21
+          x	28
+          <	5
+          y	28
+         &&	32
+          (	21
+          y	28
+          <	5
+         10	30
+         ||	33
+          y	28
+         ==	1
+         10	30
+          )	23
+          )	23
+       then	12
+      write	26
+          x	28
+          ;	29
+      while	16
+          x	28
+          <	5
+          y	28
+         &&	32
+          (	21
+          !	34
+          y	28
+         <=	7
+         10	30
+          )	23
+         do	18
+      begin	20
+          x	28
+         :=	31
+          x	28
+          +	17
+          1	30
+          ;	29
+          y	28
+         :=	31
+          y	28
+          +	17
+          2	30
+          ;	29
+        end	22
+        end	22
+          .	27
+
+Token List:
+4 28 x 25 28 y 29 20 28 x 31 30 3 29 28 y 31 30 7 29 10 34 21 28 x 5 28 y 32 21 28 y 5 30 10 33 28 y 1 30 10 23 23 12 26 28 x 29 16 28 x 5 28 y 32 21 34 28 y 7 30 10 23 18 20 28 x 31 28 x 17 30 1 29 28 y 31 28 y 17 30 2 29 22 22 27 
+Symbol Table:
+Kind | Name        | Value | Level | Address | Mark
+---------------------------------------------------
+   3 |        main |     0 |     0 |     1 |     1
+   2 |           x |     0 |     0 |     3 |     1
+   2 |           y |     0 |     0 |     4 |     1
+Line	OP Code	OP Name	L	M
+0	7	JMP	0	1
+1	6	INC	0	5
+2	1	LIT	0	3
+3	4	STO	0	3
+4	1	LIT	0	7
+5	4	STO	0	4
+6	3	LOD	0	3
+7	3	LOD	0	4
+8	2	LSS	0	8
+9	3	LOD	0	4
+10	1	LIT	0	10
+11	2	LSS	0	8
+12	3	LOD	0	4
+13	1	LIT	0	10
+14	2	EQL	0	6
+15	2	ORR	0	13
+16	2	AND	0	12
+17	2	NOT	0	14
+18	8	JPC	0	21
+19	3	LOD	0	3
+20	9	WRT	0	1
+21	3	LOD	0	3
+22	3	LOD	0	4
+23	2	LSS	0	8
+24	3	LOD	0	4
+25	1	LIT	0	10
+26	2	LEQ	0	9
+27	2	NOT	0	14
+28	2	AND	0	12
+29	8	JPC	0	39
+30	3	LOD	0	3
+31	1	LIT	0	1
+32	2	ADD	0	2
+33	4	STO	0	3
+34	3	LOD	0	4
+35	1	LIT	0	2
+36	2	ADD	0	2
+37	4	STO	0	4
+38	7	JMP	0	21
+39	9	HAL	0	3
+				PC	BP	SP	RP
+Initial values:			0	0	-1	10
+ 0	JMP	0	1	1	0	-1	10		
+	data stack : 
+ 1	INC	0	5	2	0	4	10		
+	data stack : 0 0 0 0 0 
+ 2	LIT	0	3	3	0	4	9		3 
+	data stack : 0 0 0 0 0 
+ 3	STO	0	3	4	0	4	10		
+	data stack : 0 0 0 3 0 
+ 4	LIT	0	7	5	0	4	9		7 
+	data stack : 0 0 0 3 0 
+ 5	STO	0	4	6	0	4	10		
+	data stack : 0 0 0 3 7 
+ 6	LOD	0	3	7	0	4	9		3 
+	data stack : 0 0 0 3 7 
+ 7	LOD	0	4	8	0	4	8		3 7 
+	data stack : 0 0 0 3 7 
+ 8	LSS	0	8	9	0	4	9		1 
+	data stack : 0 0 0 3 7 
+ 9	LOD	0	4	10	0	4	8		1 7 
+	data stack : 0 0 0 3 7 
+10	LIT	0	10	11	0	4	7		1 7 10 
+	data stack : 0 0 0 3 7 
+11	LSS	0	8	12	0	4	8		1 1 
+	data stack : 0 0 0 3 7 
+12	LOD	0	4	13	0	4	7		1 1 7 
+	data stack : 0 0 0 3 7 
+13	LIT	0	10	14	0	4	6		1 1 7 10 
+	data stack : 0 0 0 3 7 
+14	EQL	0	6	15	0	4	7		1 1 0 
+	data stack : 0 0 0 3 7 
+15	ORR	0	13	16	0	4	8		1 1 
+	data stack : 0 0 0 3 7 
+16	AND	0	12	17	0	4	9		1 
+	data stack : 0 0 0 3 7 
+17	NOT	0	14	18	0	4	9		0 
+	data stack : 0 0 0 3 7 
+18	JPC	0	21	21	0	4	10		
+	data stack : 0 0 0 3 7 
+21	LOD	0	3	22	0	4	9		3 
+	data stack : 0 0 0 3 7 
+22	LOD	0	4	23	0	4	8		3 7 
+	data stack : 0 0 0 3 7 
+23	LSS	0	8	24	0	4	9		1 
+	data stack : 0 0 0 3 7 
+24	LOD	0	4	25	0	4	8		1 7 
+	data stack : 0 0 0 3 7 
+25	LIT	0	10	26	0	4	7		1 7 10 
+	data stack : 0 0 0 3 7 
+26	LEQ	0	9	27	0	4	8		1 1 
+	data stack : 0 0 0 3 7 
+27	NOT	0	14	28	0	4	8		1 0 
+	data stack : 0 0 0 3 7 
+28	AND	0	12	29	0	4	9		0 
+	data stack : 0 0 0 3 7 
+29	JPC	0	39	39	0	4	10		
+	data stack : 0 0 0 3 7 
+39	HAL	0	3	40	0	4	10		
+	data stack : 0 0 0 3 7 

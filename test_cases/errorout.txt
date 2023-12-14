@@ -1,0 +1,31 @@
+Lexeme Table:
+lexeme		token type
+        var	4
+          x	28
+          ,	25
+          y	28
+          ;	29
+      begin	20
+          x	28
+         :=	31
+          3	30
+          ;	29
+          y	28
+         :=	31
+          7	30
+          ;	29
+         if	10
+          (	21
+          x	28
+         ==	1
+          y	28
+       then	12
+      write	26
+          x	28
+          ;	29
+        end	22
+          .	27
+
+Token List:
+4 28 x 25 28 y 29 20 28 x 31 30 3 29 28 y 31 30 7 29 10 21 28 x 1 28 y 12 26 28 x 29 22 27 
+Parser Error: ( must be followed by )

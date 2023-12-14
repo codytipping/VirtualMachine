@@ -1,0 +1,12 @@
+var x, y;
+begin
+	x := 3;
+	y := 7;
+	if ! ( x < y && (y < 10 || y == 10)) then
+		write x;
+	while x < y && (! y <= 10) do
+		begin
+			x := x + 1;
+			y := y + 2;
+		end
+end.
